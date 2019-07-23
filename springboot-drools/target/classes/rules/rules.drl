@@ -1,0 +1,15 @@
+package rules
+ 
+import com.sb.drools.model.Product
+rule "Offer for Mangoes"
+	when 
+		productObject: Product(type=="mango")
+	then
+		productObject.setDiscount(15);
+	end
+rule "Offer for Berry"
+	when 
+		productObject: Product(type=="berry")
+	then
+		productObject.setDiscount(25);
+	end
